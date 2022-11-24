@@ -1,0 +1,117 @@
+@import 'reset.css';
+
+@font-face {          /* Seletor que pode 'incluir' uma fonte externa no seu projeto */
+    font-family: 'Poppins';       /* Aqui pode dar o nome que quiser pra fonte. É bom usar as aspas */
+    src: url('./Fontes/Poppins-Regular.ttf') format('truetype')        /* Use a url para indicar o local do arquivo da fonte que você baixou no google fonts */
+}
+
+body {
+    margin: 0;
+    background-color: rgba(233, 227, 231, 0.651);
+}
+body > header {
+    background-color: rgb(95, 170, 236);
+    height: 100px;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+body > section {
+    background-image: url('Anya.jpg');
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 200px);
+    display: flex;
+}
+
+body > footer {
+    background-color: rgb(58, 40, 1);
+    height: 100px;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+main {
+    height: calc(100vh - 200px);
+}
+
+aside {
+    width: 100px;
+    background-color: blue;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+#menu {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding: 0;
+    margin: 0;
+    background-color: blue;
+ }
+
+
+#menu  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 240, 255);
+    margin: 10px;
+    list-style: none;
+    transition: 3s;
+    
+ }
+
+ #menu li:hover {
+    transform: rotate(360deg);
+    background-color: yellow;
+    border-radius: 50%;
+ }
+
+ #menu  li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: blue;
+    font-family: 'Poppins'; /* Colocar exatamente o nome criado no @Fonteface */
+    font-weight: bold;  /* Negrito */
+    
+ }
+
+ /* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (min-width: 575.98px) {
+    #menu {
+        background-color: black;
+    }
+body > section {
+    background-image: url('spyfamily.png')
+}
+}
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) {
+    #menu {
+        background-color: red;
+        flex-direction: row;
+    }
+    #menu li {
+        width: 200px;
+        height: 100px;
+    }
+  }
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) { 
+
+ }
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (min-width: 1199.98px) { 
+
+ }
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) { 
+
+
+ }
